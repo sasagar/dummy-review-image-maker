@@ -66,7 +66,7 @@ const Home = () => {
         <div className='flex flex-col gap-6'>
           <div className="text-black bg-white rounded p-4 overflow-hidden w-[384px]" id="source">
             <div className='flex gap-3 items-center'>
-              <img src="/usericon.png" alt="usericon"
+              <img src="./usericon.png" alt="usericon"
                 // className='h-8 w-8 leading-4'
                 width="32" height="32"
                 id="icon"

@@ -12,7 +12,7 @@ const Home = () => {
 
   const gen = () => {
     if (typeof window !== 'undefined') {
-      let node = document.querySelector('#source');
+      const node = document.querySelector('#source');
 
       node.querySelector('#icon').style.marginTop = '10px';
       node.querySelector('#username').style.marginTop = '-5px';
@@ -85,7 +85,7 @@ const Home = () => {
           <div>
             <button type="button" className='rounded bg-lime-700 text-white px-4 py-2' onClick={gen}>画像生成する！</button>
           </div>
-          <div id="image"></div>
+          <div id="image" />
         </div>
       </div>
     </main>

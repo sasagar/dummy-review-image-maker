@@ -39,7 +39,7 @@ const Rating = ({
                             <span
                                 key={`star-${num}`}
                                 // className="p-0.5"
-                                style={{ WebkitTextStrokeWidth: 1 + 'px', WebkitTextStrokeColor: 'rgb(180, 83, 9)', lineHeight: `${size * 2}px` }}
+                                style={{ WebkitTextStrokeWidth: `${1}px`, WebkitTextStrokeColor: 'rgb(180, 83, 9)', lineHeight: `${size * 2}px` }}
                             >
                                 ★
                             </span>
@@ -60,7 +60,7 @@ const Rating = ({
                             <span
                                 key={`star-active-${num}`}
                                 // className="p-0.5"
-                                style={{ WebkitTextStrokeWidth: 1 + 'px', WebkitTextStrokeColor: 'rgb(180, 83, 9)', lineHeight: `${size * 2}px` }}
+                                style={{ WebkitTextStrokeWidth: `${1}px`, WebkitTextStrokeColor: 'rgb(180, 83, 9)', lineHeight: `${size * 2}px` }}
                             >
                                 ★
                             </span>

@@ -2,7 +2,7 @@
 const nextConfig = {
     output: "export",
     distDir: "out",
-    assetPrefix: "./dummy-review-image-maker"
+    basePath: "/dummy-review-image-maker",
 };
 
 export default nextConfig;

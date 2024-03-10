@@ -3,6 +3,10 @@ import html2canvas from 'html2canvas';
 import { useState } from 'react';
 import Rating from './_component/rating';
 
+/**
+ * Generates some action when the window is defined.
+ *
+ */
 const Home = () => {
   const [user, setUser] = useState("名無し");
   const [title, setTitle] = useState("");
@@ -10,9 +14,18 @@ const Home = () => {
   const [store, setStore] = useState("");
   const [review, setReview] = useState("");
 
+  /**
+   * Generates some action when the window is defined.
+   */
   const gen = () => {
     if (typeof window !== 'undefined') {
       const node = document.querySelector('#source');
+
+      const nodeHeight = node.getBoundingClientRect().height;
+
+      if (nodeHeight % 16 !== 0) {
+        node.style.height = `${Math.ceil(nodeHeight / 16) * 16}px`;
+      }
 
       node.querySelector('#icon').style.marginTop = '10px';
       node.querySelector('#username').style.marginTop = '-5px';
@@ -21,12 +34,15 @@ const Home = () => {
         if (document.querySelector('#image').hasChildNodes()) {
           const children = document.querySelector('#image').childNodes;
 
-          children.forEach(child => { child.remove() });
+          for (const child of children) {
+            child.remove();
+          }
         }
         document.querySelector('#image').appendChild(canvas);
       });
       node.querySelector('#icon').style.marginTop = '0';
       node.querySelector('#username').style.marginTop = '0';
+      node.style.height = "auto";
     }
   }
 
